@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render = () => (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link to="/" className="navbar-brand">
         React App
       </Link>
       <button className="navbar-toggler" type="button" dataToggle="collapse" dataTarget="#navbarSupportedContent" ariaControls="navbarSupportedContent" ariaExpanded="false" ariaLabel="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-    
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
@@ -18,8 +17,8 @@ class Navbar extends Component {
               Home
             </Link>
           </li>
-          <li className="nav-item" className="navbar-link">
-            <Link to="/counter">
+          <li className="nav-item">
+            <Link to="/counter" className="navbar-link">
               Counter
             </Link>  
           </li>
