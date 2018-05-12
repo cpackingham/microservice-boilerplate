@@ -1,0 +1,42 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    expose: 
+      - "3000"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./client:/usr/src"
+    depends_on:
+      - server
+    networks:
+      - something_net
+  db: 
+    build: ./db
+    ports:
+      - "6001:5432"
+    networks:
+      - something_net
+  server:
+    build: ./server
+    expose: 
+      - "3001"
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+    volumes:
+      - "./server:/usr/src"
+    networks:
+      something_net:
+        ipv4_address: 172.16.238.11
+  
+networks: 
+  something_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        -
+          subnet: 172.16.238.0/24
