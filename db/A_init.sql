@@ -7,5 +7,5 @@ CREATE DATABASE sampledb;
 -- Create users table
 CREATE TABLE something (
   id SERIAL PRIMARY KEY,
-  some_field text UNIQUE,
+  some_field text UNIQUE
 );

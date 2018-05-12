@@ -1,7 +1,11 @@
 const app = require('express')();
 const { db } = require('./db');
 
-app.get('/', (req, res) => {
+app.get('/api/hello', (req, res) => {
+  res.send('Hello!');
+});
+
+app.get('/api/cards', (req, res) => {
   res.send('Hello!');
 });
 

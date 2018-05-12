@@ -11,4 +11,4 @@ COPY . .
 RUN yarn install
 
 # Start the server
-CMD ['yarn', 'run', 'start']
+CMD ["yarn", "run", "start"]

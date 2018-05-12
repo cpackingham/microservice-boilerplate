@@ -30,7 +30,7 @@ services:
       - "./server:/usr/src"
     networks:
       something_net:
-        ipv4_address: 172.16.238.11
+        ipv4_address: 172.16.239.11
   
 networks: 
   something_net:
@@ -39,4 +39,4 @@ networks:
       driver: default
       config:
         -
-          subnet: 172.16.238.0/24
+          subnet: 172.16.239.0/24
