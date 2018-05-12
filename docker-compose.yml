@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   client:
     build: ./client
@@ -26,6 +26,11 @@ services:
       - "3001:3001"
     depends_on:
       - db
+    environment:
+      - PGHOST=db
+      - PGUSER=postgres
+      - PGDATABASE=sampledb
+      - PORT=3001
     volumes:
       - "./server:/usr/src"
     networks:

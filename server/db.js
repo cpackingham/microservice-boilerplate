@@ -1,6 +1,10 @@
+// Require pg to connect to the database
 const pg = require('pg');
 
+// Assign db to a new pg client
 const db = new pg.Client();
+
+// IIFE connecting to the db service, logging success or failure
 (async () => {
   try {
     await db.connect();
@@ -10,4 +14,5 @@ const db = new pg.Client();
   }
 })();
 
+// Export the db object with a key of db
 module.exports.db = db;
