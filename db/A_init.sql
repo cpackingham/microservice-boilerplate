@@ -5,7 +5,8 @@ CREATE DATABASE sampledb;
 -- Connect to the db
 \c sampledb
 -- Create users table
-CREATE TABLE something (
+CREATE TABLE cards (
   id SERIAL PRIMARY KEY,
-  some_field text UNIQUE
+  card_name text,
+  card_description text,
 );
