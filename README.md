@@ -36,4 +36,4 @@
   14. Follow the instructions of "view push commands" to set up the ability to push docker images
   15. Push all of your images up with tags of their names
   16. Create a docker-compose.prod.yml with image URLs and changed ports
-  17. Run ecs-cli compose --file docker-compose.prod.yml --project-name magic-box service up  --create-log-groups
+  17. Run ecs-cli compose --cluster (cluster) --file docker-compose.prod.yml --project-name magic-box service up  --create-log-groups

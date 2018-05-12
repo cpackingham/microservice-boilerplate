@@ -6,6 +6,8 @@ services:
       - "3000"
     ports:
       - "3000:3000"
+    environment:
+      - PORT=3000
     volumes:
       - "./client:/usr/src"
     depends_on:
